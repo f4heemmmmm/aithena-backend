@@ -6,7 +6,7 @@ import { CreateAdministratorDTO, UpdateAdministratorDTO } from "./admin.dto";
 
 @Controller("administrators")
 @UseInterceptors(ClassSerializerInterceptor)
-// @UseGuards(JWTAuthGuard)
+@UseGuards(JWTAuthGuard)
 export class AdministratorController {
     constructor(
         private readonly administratorService: AdministratorService

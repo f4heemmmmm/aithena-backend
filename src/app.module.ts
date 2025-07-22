@@ -28,7 +28,7 @@ import { AdministratorModule } from "./modules/admin/admin.module";
                 url: configService.get("DATABASE_URL"), // Use DATABASE_URL instead of individual params
                 ssl: configService.get("NODE_ENV") === "production" ? { rejectUnauthorized: false } : false,
                 entities: [__dirname + "/**/*.entity{.ts,.js}"],
-                synchronize: true, // TEMPORARILY enable to create tables
+                synchronize: false, // TEMPORARILY enable to create tables
                 autoLoadEntities: true,
                 logging: configService.get("NODE_ENV") === "development",
             }),
