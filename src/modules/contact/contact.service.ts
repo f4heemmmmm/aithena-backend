@@ -192,90 +192,114 @@ export class ContactService {
                         <title>Thank You - AITHENA</title>
                         <link rel="preconnect" href="https://fonts.googleapis.com">
                         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+                        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
                     </head>
-                    <body style="margin: 0; padding: 0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; background-color: #f8fafc; color: #1e293b; line-height: 1.6;">
-                        <div style="max-width: 650px; margin: 0 auto; background: #ffffff; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                    <body style="margin: 0; padding: 0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); min-height: 100vh;">
+                        <!-- Main Container -->
+                        <div style="max-width: 680px; margin: 0 auto; background: #ffffff; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); overflow: hidden;">
                             
-                            <!-- Header -->
-                            <div style="background: linear-gradient(135deg, #1e293b 0%, #334155 100%); padding: 48px 40px; text-align: center; position: relative; overflow: hidden;">
-                                <!-- Decorative elements -->
-                                <div style="position: absolute; top: 20px; left: 20px; width: 60px; height: 60px; background: rgba(59, 130, 246, 0.1); border-radius: 50%; filter: blur(20px);"></div>
-                                <div style="position: absolute; bottom: 20px; right: 20px; width: 80px; height: 80px; background: rgba(59, 130, 246, 0.1); border-radius: 50%; filter: blur(20px);"></div>
+                            <!-- Hero Header -->
+                            <div style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); padding: 60px 40px; text-align: center; position: relative; overflow: hidden;">
+                                <!-- Animated Background Pattern -->
+                                <div style="position: absolute; inset: 0; opacity: 0.1;">
+                                    <div style="position: absolute; inset: 0; background-image: radial-gradient(circle at 25px 25px, rgba(59, 130, 246, 0.3) 2px, transparent 0); background-size: 50px 50px;"></div>
+                                </div>
                                 
-                                <h1 style="margin: 0 0 12px 0; font-family: 'DM Sans', sans-serif; font-size: 42px; font-weight: 600; color: #ffffff; letter-spacing: -0.02em; position: relative;">
-                                    Thank You
-                                </h1>
-                                <p style="margin: 0; color: #cbd5e1; font-size: 18px; font-weight: 300; position: relative;">
-                                    We've received your message
-                                </p>
+                                <!-- Floating Decorative Elements -->
+                                <div style="position: absolute; top: 20px; left: 40px; width: 80px; height: 80px; background: rgba(59, 130, 246, 0.15); border-radius: 50%; filter: blur(30px);"></div>
+                                <div style="position: absolute; bottom: 30px; right: 40px; width: 100px; height: 100px; background: rgba(147, 197, 253, 0.1); border-radius: 50%; filter: blur(40px);"></div>
+                                <div style="position: absolute; top: 50%; left: 20px; width: 60px; height: 60px; background: rgba(59, 130, 246, 0.08); border-radius: 50%; filter: blur(25px);"></div>
+                                
+                                <!-- Content -->
+                                <div style="position: relative; z-index: 10;">
+                                    <div style="margin-bottom: 20px;">
+                                        <h1 style="margin: 0; font-family: 'DM Sans', sans-serif; font-size: 56px; font-weight: 300; color: #ffffff; letter-spacing: -0.03em; line-height: 1.1;">
+                                            Thank You
+                                        </h1>
+                                    </div>
+                                    <p style="margin: 0; color: #93c5fd; font-size: 18px; font-weight: 300; letter-spacing: 0.01em;">
+                                        We've received your message
+                                    </p>
+                                </div>
                             </div>
 
-                            <!-- Content -->
-                            <div style="padding: 48px 40px;">
-                                <div style="margin-bottom: 32px;">
-                                    <p style="margin: 0 0 24px 0; font-size: 18px; color: #374151; font-weight: 400;">
+                            <!-- Content Section -->
+                            <div style="padding: 50px 40px; background: #ffffff;">
+                                <!-- Greeting -->
+                                <div style="margin-bottom: 40px;">
+                                    <p style="margin: 0 0 30px 0; font-family: 'DM Sans', sans-serif; font-size: 20px; color: #1e293b; font-weight: 400; letter-spacing: -0.01em;">
                                         Dear ${first_name},
                                     </p>
                                     
-                                    <p style="margin: 0 0 32px 0; font-size: 16px; color: #6b7280; line-height: 1.7;">
-                                        Thank you for reaching out to <strong style="color: #1e293b;">AITHENA</strong>. We have received your message and will respond within 24 hours. Your inquiry is important to us, and we look forward to assisting you.
+                                    <p style="margin: 0; font-size: 17px; color: #475569; line-height: 1.8; font-weight: 300;">
+                                        Thank you for reaching out to <span style="font-family: 'DM Sans', sans-serif; font-weight: 600; color: #1e293b; background: linear-gradient(135deg, #3b82f6, #1d4ed8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">AITHENA</span>. We have received your message and will respond within 24 hours. Your inquiry is important to us, and we look forward to assisting you with our AI-powered legal solutions.
                                     </p>
                                 </div>
 
                                 <!-- Message Summary Card -->
-                                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; margin: 32px 0; position: relative;">
-                                    <div style="display: flex; align-items: center; margin-bottom: 16px;">
-                                        <div style="width: 4px; height: 20px; background: linear-gradient(135deg, #3b82f6, #1d4ed8); border-radius: 2px; margin-right: 12px;"></div>
-                                        <h3 style="margin: 0; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px;">
+                                <div style="background: linear-gradient(135deg, #faf0e6 0%, #f8fafc 100%); border: 1px solid #e2e8f0; border-radius: 16px; padding: 30px; margin: 40px 0; position: relative; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 50%, #93c5fd 100%); border-radius: 16px 16px 0 0;"></div>
+                                    
+                                    <div style="margin-bottom: 20px;">
+                                        <h3 style="margin: 0; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.8px;">
                                             Your Message
                                         </h3>
                                     </div>
-                                    <p style="margin: 0; color: #475569; font-style: italic; line-height: 1.6; font-size: 15px; padding-left: 16px;">
-                                        "${message.length > 150 ? message.substring(0, 150) + "..." : message}"
-                                    </p>
+                                    <div style="background: #ffffff; padding: 20px; border-radius: 12px; border-left: 4px solid #3b82f6;">
+                                        <p style="margin: 0; color: #374151; font-style: italic; line-height: 1.7; font-size: 15px;">
+                                            "${message.length > 160 ? message.substring(0, 160) + "..." : message}"
+                                        </p>
+                                    </div>
                                 </div>
 
-                                <!-- Contact Information -->
-                                <div style="background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); border-radius: 12px; padding: 24px; margin: 32px 0;">
-                                    <p style="margin: 0 0 16px 0; font-size: 16px; color: #374151; line-height: 1.7;">
-                                        If you have any urgent questions, please don't hesitate to contact us directly:
-                                    </p>
-                                    <div style="display: flex; align-items: center; margin-bottom: 8px;">
-                                        <span style="font-size: 16px; margin-right: 8px;">📧</span>
-                                        <a href="mailto:hello@aithena.sg" style="color: #3b82f6; text-decoration: none; font-weight: 500; font-size: 16px;">
+                                <!-- Call-to-Action Section -->
+                                <div style="background: linear-gradient(135deg, #1e293b 0%, #334155 100%); border-radius: 16px; padding: 32px; margin: 40px 0; text-align: center; position: relative; overflow: hidden;">
+                                    <div style="position: absolute; top: 10px; right: 15px; width: 40px; height: 40px; background: rgba(59, 130, 246, 0.1); border-radius: 50%; filter: blur(15px);"></div>
+                                    <div style="position: absolute; bottom: 10px; left: 15px; width: 50px; height: 50px; background: rgba(147, 197, 253, 0.08); border-radius: 50%; filter: blur(20px);"></div>
+                                    
+                                    <div style="position: relative; z-index: 10;">
+                                        <h3 style="margin: 0 0 16px 0; font-family: 'DM Sans', sans-serif; font-size: 20px; font-weight: 500; color: #ffffff; letter-spacing: -0.01em;">
+                                            Need immediate assistance?
+                                        </h3>
+                                        <p style="margin: 0 0 20px 0; color: #cbd5e1; font-size: 15px; line-height: 1.6;">
+                                            For urgent inquiries, reach out to us directly
+                                        </p>
+                                        <a href="mailto:hello@aithena.sg" style="display: inline-block; background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: #ffffff; padding: 12px 28px; text-decoration: none; border-radius: 8px; font-weight: 500; font-size: 15px; box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.3); transition: all 0.3s ease;">
                                             hello@aithena.sg
                                         </a>
                                     </div>
                                 </div>
 
-                                <div style="margin-top: 40px; padding-top: 24px; border-top: 1px solid #e2e8f0;">
-                                    <p style="margin: 0 0 8px 0; font-size: 16px; color: #374151;">
+                                <!-- Signature -->
+                                <div style="margin-top: 50px; padding-top: 30px; border-top: 1px solid #e2e8f0;">
+                                    <p style="margin: 0 0 12px 0; font-size: 16px; color: #475569; font-weight: 300;">
                                         Best regards,
                                     </p>
-                                    <p style="margin: 0; font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 600; color: #1e293b;">
+                                    <p style="margin: 0; font-family: 'DM Sans', sans-serif; font-size: 20px; font-weight: 600; color: #1e293b; letter-spacing: -0.01em;">
                                         The AITHENA Team
                                     </p>
                                 </div>
                             </div>
 
                             <!-- Footer -->
-                            <div style="background: #f8fafc; padding: 32px 40px; border-top: 1px solid #e2e8f0;">
-                                <div style="text-align: center; margin-bottom: 16px;">
-                                    <h4 style="margin: 0 0 8px 0; font-family: 'DM Sans', sans-serif; font-size: 20px; font-weight: 600; color: #1e293b; letter-spacing: -0.01em;">
+                            <div style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); padding: 40px; border-top: 1px solid #e2e8f0;">
+                                <!-- Brand Section -->
+                                <div style="text-align: center; margin-bottom: 25px;">
+                                    <h4 style="margin: 0 0 8px 0; font-family: 'DM Sans', sans-serif; font-size: 32px; font-weight: 600; color: #1e293b; letter-spacing: -0.02em;">
                                         AITHENA
                                     </h4>
-                                    <p style="margin: 0; color: #3b82f6; font-size: 14px; font-weight: 300; font-style: italic;">
+                                    <p style="margin: 0; font-family: 'DM Sans', sans-serif; color: #3b82f6; font-size: 15px; font-weight: 300; font-style: italic; letter-spacing: 0.01em;">
                                         Simplifying Legal Work with AI-Powered Efficiency
                                     </p>
                                 </div>
                                 
-                                <div style="text-align: center; padding-top: 16px; border-top: 1px solid #e2e8f0;">
-                                    <p style="margin: 0 0 8px 0; color: #64748b; font-size: 14px; line-height: 1.5;">
+                                <!-- Address & Legal -->
+                                <div style="text-align: center; padding-top: 20px; border-top: 1px solid #e2e8f0;">
+                                    <p style="margin: 0 0 12px 0; color: #64748b; font-size: 14px; line-height: 1.6; font-weight: 400;">
                                         160 Robinson Road, #14-04<br>
                                         Singapore Business Federation Center
                                     </p>
-                                    <p style="margin: 0; color: #94a3b8; font-size: 12px;">
+                                    <p style="margin: 0; color: #94a3b8; font-size: 12px; font-weight: 300;">
                                         This is an automated message. Please do not reply to this email.
                                     </p>
                                 </div>
