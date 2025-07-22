@@ -20,27 +20,25 @@ import { AdministratorModule } from "./modules/admin/admin.module";
             cache: true,
         }),
 
-        // Database Configuration - UPDATED FOR RAILWAY
+        // Database Configuration - SIMPLIFIED USING DATABASE_URL
         TypeOrmModule.forRootAsync({
             imports: [ConfigModule],
             useFactory: (configService: ConfigService) => {
                 const isProduction = configService.get("NODE_ENV") === "production";
+                const databaseUrl = configService.get("DATABASE_URL");
                 
                 // Log database configuration for debugging
                 console.log("🗄️  Database Configuration:");
-                console.log(`   Host: ${configService.get("DATABASE_HOST") || configService.get("PGHOST")}`);
-                console.log(`   Port: ${configService.get("DATABASE_PORT") || configService.get("PGPORT")}`);
-                console.log(`   Database: ${configService.get("DATABASE_NAME") || configService.get("PGDATABASE")}`);
-                console.log(`   Username: ${configService.get("DATABASE_USERNAME") || configService.get("PGUSER")}`);
+                console.log(`   Database URL Set: ${databaseUrl ? "✅" : "❌"}`);
                 console.log(`   Production: ${isProduction}`);
+
+                if (!databaseUrl) {
+                    throw new Error("DATABASE_URL environment variable is required");
+                }
 
                 return {
                     type: "postgres",
-                    host: configService.get("DATABASE_HOST") || configService.get("PGHOST"),
-                    port: parseInt(configService.get("DATABASE_PORT") || configService.get("PGPORT") || "5432"),
-                    username: configService.get("DATABASE_USERNAME") || configService.get("PGUSER"),
-                    password: configService.get("DATABASE_PASSWORD") || configService.get("PGPASSWORD"),
-                    database: configService.get("DATABASE_NAME") || configService.get("PGDATABASE"),
+                    url: databaseUrl,
                     entities: [__dirname + "/**/*.entity{.ts,.js}"],
                     synchronize: !isProduction, // Only sync in development
                     migrations: [__dirname + "/migrations/*{.ts,.js}"],
@@ -57,7 +55,7 @@ import { AdministratorModule } from "./modules/admin/admin.module";
             inject: [ConfigService]
         }),
 
-        // Rate Limiting Module - PRODUCTION OPTIMIZED
+        // Rate Limiting Module
         ThrottlerModule.forRootAsync({
             imports: [ConfigModule],
             useFactory: (configService: ConfigService) => {
@@ -101,8 +99,7 @@ export class AppModule {
         console.log("🚀 AITHENA Backend Starting...");
         console.log("🚀 ================================");
         console.log(`📊 Environment: ${this.configService.get("NODE_ENV")}`);
-        console.log(`🗄️  Database: ${this.configService.get("DATABASE_NAME") || this.configService.get("PGDATABASE")}`);
-        console.log(`🗄️  Database Host: ${this.configService.get("DATABASE_HOST") || this.configService.get("PGHOST")}`);
+        console.log(`🗄️  Database URL: ${this.configService.get("DATABASE_URL") ? "✅ Set" : "❌ Missing"}`);
         console.log(`🌐 Port: ${this.configService.get("PORT")}`);
         console.log(`🔗 Frontend URL: ${this.configService.get("FRONTEND_URL")}`);
         console.log(`🔐 JWT Secret Set: ${this.configService.get("JWT_SECRET") ? "✅" : "❌"}`);
